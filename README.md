@@ -1,3 +1,4 @@
 # To-Do-List
-My web mini project about to-do-list activity, the background of web can change following through the time of whenever user open the web and already responsive.
-Still do an improvement with the content coresponding with my progress learning in javascript, html, and css :)
+My mini web project about to-do-list activity, the background of web can change following through the time of whenever user open the web. This web is already responsive.
+NOTE:
+This web is still under some improvement with the content, along side with my progress in learning javascript, html, and css :)
