@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-built To-Do Lists</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body class="day" class="afternoon" class="night">
+    <!-- Header -->
+    <div class="header">
+        <div class="nav">
+            <h1><i class="fa-solid fa-clipboard-check"></i>To-Do Activity</h1>
+            <div class="userInput">
+                <label for="addItem"></label>
+                <input type="text" id="addItem-list" name="addItem" placeholder="Your To-do List">
+                <button type="submit" onclick="addItem()" id="changeButton">Submit</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Main / Add Lists -->
+    <div class="main">
+        <h2 class="greet">Hello! What are your plans today?</h2>
+
+        <div class="toDoLists"></div>
+    </div>
+
+    <!-- Script -->
+    <script src="javaScript/script2.js"></script>
+    <script src="javaScript/setTime.js"></script>
+
+</body>
+
+</html>
+
+<!-- PERLU PERBAIKAN -->
+<!-- 1. item color harus sesuaikan dengan time background -->
+<!-- "3. Good afternoon" bisa diubah sesuai time -->

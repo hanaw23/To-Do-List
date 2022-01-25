@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Fredoka+One&family=Quicksand:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    max-height: max-content;
+}
+
+/* Body */
+body {
+    font-family: 'Fredoka One', cursive;
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    overflow-x: hidden;
+}
+
+/* Background changes based on Time */
+.day {
+    background: linear-gradient(rgb(105, 188, 221), rgb(224, 220, 152));
+}
+
+.afternoon {
+    background: linear-gradient(rgb(233, 153, 187), rgb(224, 220, 152));
+}
+
+.night {
+    background: linear-gradient(rgb(10, 10, 17), rgb(160, 128, 197),rgb(206, 211, 231));
+}
+/* End of background */
+/* End of body */
+
+/* Header */
+header {
+    width: 95%;
+    margin:auto;
+}
+
+.nav {
+    display: flex;
+    margin: 18px 15px;
+    justify-content: space-between;
+}
+
+.nav h1{
+    letter-spacing: 2px;
+    color: white;
+    padding-top: 8px;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.nav i {
+    color: white;
+    padding-top: 5px;
+    padding-right: 10px;
+    margin-left: 20px;
+}
+
+.userInput {
+    width: 350px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.userInput input {
+    width: 70%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    /* transition */
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+::placeholder {
+    color: white;
+    font-family: 'Baloo 2', cursive;
+}
+
+.userInput input:focus {
+    box-shadow: 0 0 7px white;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.userInput button {
+    background-color: rgb(28, 143, 219);
+    border-radius: 10px;
+    border:none;
+    outline: none;
+    color:white;
+    font-weight: bold;
+    font-family: 'Baloo 2', cursive;
+    width: 70px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.userInput button:hover {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    font-weight: bold;
+    transition: 0.5s;
+    color:white;
+}
+/* End of Header */
+
+/* Main */
+.main {
+    width: 95%;
+    margin:auto;
+}
+
+.greet {
+    display: flex;
+    justify-content: center;
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: 3px;
+    color: white;
+    padding: 2px;
+    width: 60vw;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+
+.toDoLists {
+    width: 500px;
+    margin: auto;
+    margin-top: 80px;
+
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    padding: 16px;
+    color:rgb(107, 105, 101);
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* transition */
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+.item:hover {
+    background-color: white;
+    color: #F25278;
+    border: none;
+    box-shadow: 0 0 5px white;
+    cursor: pointer;
+}
+
+.item i{
+    cursor: pointer;
+    margin: 0 5px;
+}
+/* End of Main */
+
+
+/* Responsive */
+@media(max-width: 768px) {
+    .nav {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .nav h1 {
+        margin: 10px 0;
+    }
+
+    .userInput input{
+        width: 100%;
+        margin: 25px 0;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .userInput input:focus{
+        width: 100%;
+        margin: 25px 0;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+        color: rgb(107, 105, 101);
+    }
+
+    ::placeholder {
+        color: rgb(107, 105, 101);
+        font-family: 'Baloo 2', cursive;
+    }
+
+    .userAccount h2 {
+        width: 100%;
+    }
+
+    .greet {
+        font-size: 45px;
+        width: 70vw;
+    }
+
+    .toDoLists {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+      .userInput input{
+        width: 74%;
+        margin: 25px 0;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .userInput input:focus{
+        width: 100%;
+        margin: 25px 0;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+        color: rgb(107, 105, 101);
+    }
+
+    ::placeholder {
+        color: rgb(107, 105, 101);
+        font-family: 'Baloo 2', cursive;
+    }
+
+    .userAccount h2 {
+        width: 74%;
+        font-size: 45px;
+        text-align: center;
+        margin:auto;
+    }
+
+    .greet {
+        font-size: 30px;
+        width: 70vw;
+    }
+
+    .toDoLists {
+        width: 74%;
+    }
+}
+
+@media (max-width: 360px) {
+    .userInput input{
+        width: 60%;
+        margin: 25px 0;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .userInput input:focus{
+        width: 100%;
+        margin: 25px 0;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+        color: rgb(107, 105, 101);
+    }
+
+    ::placeholder {
+        color: rgb(107, 105, 101);
+        font-family: 'Baloo 2', cursive;
+    }
+
+    .userAccount h2 {
+        width: 70%;
+        font-size: 35px;
+        text-align: center;
+        margin:auto;
+    }
+
+    .greet {
+        font-size: 25px;
+        width: 70vw;
+    }
+
+    .toDoLists {
+        width: 60%;
+    }
+}
