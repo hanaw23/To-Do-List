@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap");
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin-top: 250px;
+  margin-left: 150px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  color: #42474e;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+
+.image {
+  width: 50%;
+  margin-top: -80px;
+  margin-right: 180px;
+}
+
+.vector-img {
+  width: 600px;
+  height: 600px;
+}
+
+.desc {
+  margin-top: -5px;
+}
+
+a {
+  color: #42474e;
+}
+
+.account {
+  margin-top: 50px;
+  width: 50%;
+}
+
+.sign {
+  margin-top: 50px;
+}
+
+.signIn {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.signUp-btn {
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 160px;
+  background-color: #2a3a42;
+  color: white;
+  cursor: pointer;
+}
+
+/* Background changes based on Time  */
+.day {
+  background: linear-gradient(rgb(105, 188, 221), rgb(224, 220, 152));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.afternoon {
+  background: linear-gradient(rgb(233, 153, 187), rgb(224, 220, 152));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.night {
+  background: linear-gradient(rgb(10, 10, 17), rgb(160, 128, 197), rgb(206, 211, 231));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
