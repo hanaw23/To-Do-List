@@ -49,33 +49,36 @@ module.exports = (sequelize, DataTypes) => {
           },
         };
 
-        let user = await this.findOne(query);
-        // console.log(user);
-
-        const userData = {
-          id: user.dataValues.id,
-          username: user.dataValues.username,
-          email: user.dataValues.email,
-        };
-
         let resultObj = {
           success: false,
           alert: "",
           token: "",
         };
 
-        if (!user) {
-          resultObj.alert = "User not found!";
+        if (getBody.username === "" || getBody.password === "" || getBody.email === "") {
+          resultObj.alert = "Please fill the form!";
         } else {
-          let dbPassword = user.dataValues.password;
-          let isPasswordValid = this.#comparePassword(getBody.password, dbPassword);
+          let user = await this.findOne(query);
 
-          if (!isPasswordValid) {
-            resultObj.alert = "Invalid Password!";
+          if (!user) {
+            resultObj.alert = "User not found!";
           } else {
-            resultObj.token = this.#generateToken(userData);
-            resultObj.success = true;
-            resultObj.data = userData;
+            const userData = {
+              id: user.dataValues.id,
+              username: user.dataValues.username,
+              email: user.dataValues.email,
+            };
+
+            let dbPassword = user.dataValues.password;
+            let isPasswordValid = this.#comparePassword(getBody.password, dbPassword);
+
+            if (!isPasswordValid) {
+              resultObj.alert = "Invalid Password!";
+            } else {
+              resultObj.token = this.#generateToken(userData);
+              resultObj.success = true;
+              resultObj.data = userData;
+            }
           }
         }
         return Promise.resolve(resultObj);
